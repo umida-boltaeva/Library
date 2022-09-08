@@ -1,7 +1,9 @@
 let myLibrary = [
-  new Book('The Mother', 'Jane Caro', 200, true),
-  new Book('The Father', 'Jane Caro', 200, true),
-  new Book('The Child', 'Jane Caro', 200, false),
+  new Book('The Mother', 'Jane Caro', '200 pages', true),
+  new Book('The Mother', 'Jane Caro', '200 pages', true),
+  new Book('The Mother', 'Jane Caro', '200 pages', true),
+  new Book('The Hobbit', 'J. R. R. Tolkien', '320 pages', true),
+  new Book('All the light we cannot see', 'Anthony Doerr', '350 pages', false),
 ];
 
 //constructor
