@@ -11,10 +11,33 @@
 .card {
   border: 2px solid #ffa500;
   border-radius: 5px;
-  box-shadow: 5px rgba(180, 178, 175, 0.5);
+  box-shadow: 0 5px rgba(180, 178, 175, 0.5);
   background: #fcf0db;
-  color: #1c0e0e;
   font-family: 'Libre Baskerville', serif;
   font-size: 20px;
   text-align: center;
+}
+
+.title {
+  color: #1c0e0e;
+}
+
+.author,
+.pages {
+  color: #978f84;
+}
+
+.add-btn {
+  background-color: #ffa500;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 17px;
+  height: 30px;
+  margin-top: 38px;
+  outline: 0;
+  text-align: center;
+  width: 15%;
 }

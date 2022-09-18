@@ -1,6 +1,6 @@
 let myLibrary = [
   new Book('The Mother', 'Jane Caro', '200 pages', true),
-  new Book('The Mother', 'Jane Caro', '200 pages', true),
+  new Book('Dear Edward', 'Ann Napolitano', '215 pages', true),
   new Book('The Mother', 'Jane Caro', '200 pages', true),
   new Book('The Hobbit', 'J. R. R. Tolkien', '320 pages', true),
   new Book('All the light we cannot see', 'Anthony Doerr', '350 pages', false),
@@ -65,6 +65,12 @@ function renderBook(book, index) {
   }
   checkbox.appendChild(document.createTextNode(book.checkbox));
   card.appendChild(checkbox);
+
+  //render remove button.
+  const removeBtn = document.createElement('button');
+  removeBtn.classList.add('delete-btn');
+  removeBtn.appendChild(document.createTextNode('Delete'));
+  card.appendChild(removeBtn);
 
   return card;
 }
