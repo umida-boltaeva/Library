@@ -9,19 +9,14 @@ body {
   background-color: #ffa502;
   border-radius: 20px;
   box-sizing: border-box;
-  height: 500px;
+  height: 350px;
   padding: 20px;
-  width: 320px;
+  width: 340px;
 }
 
 .input-container {
   height: 50px;
   position: relative;
-  width: 100%;
-}
-
-.ic1 {
-  margin-top: 40px;
 }
 
 .ic2 {
@@ -91,18 +86,17 @@ body {
   background-color: #fcf0db;
   border-radius: 12px;
   border: 0;
-  box-sizing: border-box;
   color: #978f84;
   cursor: pointer;
   font-size: 18px;
   height: 50px;
   margin-top: 38px;
-  outline: 0;
   text-align: center;
   width: 100%;
 }
 
 .add:hover {
-  background-color: #f6bb4e;
-  color: #dc2f55;
+  background-color: #ae7202;
+  color: #eee;
+  font-size: 20px;
 }
