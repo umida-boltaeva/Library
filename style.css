@@ -39,3 +39,19 @@
   text-align: center;
   width: 13%;
 }
+
+.delete-btn {
+  margin: 10px;
+  background-color: #ffa500;
+  border-radius: 5px;
+  border: 0;
+  color: #eee;
+  cursor: pointer;
+  height: 25px;
+  margin-right: -70px;
+}
+
+.delete-btn:hover {
+  background-color: #ae7202;
+  color: #eee;
+}
