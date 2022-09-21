@@ -69,9 +69,29 @@ function renderBook(book, index) {
   //render remove button.
   const removeBtn = document.createElement('button');
   removeBtn.classList.add('delete-btn');
-  removeBtn.appendChild(document.createTextNode('Delete'));
+  removeBtn.appendChild(document.createTextNode('🗑'));
   card.appendChild(removeBtn);
 
   return card;
 }
 renderBookList();
+
+function addButtonHandler() {
+  const formContainer = document.getElementById('form-container');
+
+  if (formContainer.classList.contains('active')) {
+    formContainer.classList.remove('active');
+  } else {
+    formContainer.classList.add('active');
+  }
+}
+
+function submitHandler(e) {
+  console.log(e);
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const formProps = Object.fromEntries(formData);
+  console.log(formProps);
+}
+const form = document.getElementById('form');
+form.addEventListener('submit', submitHandler);

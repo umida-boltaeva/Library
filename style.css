@@ -42,16 +42,150 @@
 
 .delete-btn {
   margin: 10px;
-  background-color: #ffa500;
+  /* background-color: #ffa500; */
   border-radius: 5px;
   border: 0;
   color: #eee;
   cursor: pointer;
   height: 25px;
-  margin-right: -70px;
+  margin-left: 70px;
 }
 
 .delete-btn:hover {
   background-color: #ae7202;
   color: #eee;
+}
+
+.add-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* form style */
+
+#form-container {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#form-container.active {
+  display: flex;
+}
+
+.close-btn {
+  color: #595652;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  border: 0;
+  background-color: #eee;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+#form {
+  background-color: #ffa502;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 350px;
+  padding: 20px;
+  position: relative;
+  width: 340px;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+}
+
+.input-container:not(:first-child) {
+  margin-top: 30px;
+}
+
+.input {
+  background-color: #fcf0db;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #595652;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.cut {
+  background-color: #ffa502;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-short {
+  width: 65px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #978f84;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #978f84;
+}
+
+.input:focus ~ .placeholder {
+  color: #dc2f55;
+}
+
+.add {
+  background-color: #fcf0db;
+  border-radius: 12px;
+  border: 0;
+  color: #978f84;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  text-align: center;
+  width: 100%;
+}
+
+.add:hover {
+  background-color: #000000;
+  color: #eee;
+  font-size: 20px;
 }

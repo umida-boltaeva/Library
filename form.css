@@ -19,7 +19,7 @@ body {
   position: relative;
 }
 
-.ic2 {
+.input-container:not(:first-child) {
   margin-top: 30px;
 }
 
@@ -96,7 +96,7 @@ body {
 }
 
 .add:hover {
-  background-color: #ae7202;
+  background-color: #000000;
   color: #eee;
   font-size: 20px;
 }
