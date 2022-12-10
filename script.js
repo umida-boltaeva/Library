@@ -18,8 +18,15 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
 }
 
+function removeChildren(element) {
+  while (element.firstChild) {
+    element.removeChild(element.lastChild);
+  }
+}
+
 function renderBookList() {
   const cards = document.getElementById('cards');
+  removeChildren(cards);
   myLibrary.forEach((book, index) => {
     cards.appendChild(renderBook(book, index));
   });
@@ -87,11 +94,17 @@ function addButtonHandler() {
 }
 
 function submitHandler(e) {
-  console.log(e);
+  if(e === undefined) return null;
+
   e.preventDefault();
   const formData = new FormData(e.target);
+
   const formProps = Object.fromEntries(formData);
-  console.log(formProps);
+
+  const newBook = new Book(formProps.title, formProps.author, formProps.pages, formProps.read === "on");
+  myLibrary.push(newBook);
+  renderBookList();
+  addButtonHandler();
 }
 const form = document.getElementById('form');
 form.addEventListener('submit', submitHandler);
