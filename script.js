@@ -75,6 +75,8 @@ function renderBook(book, index) {
 
   //render remove button.
   const removeBtn = document.createElement('button');
+  removeBtn.dataset.id = index;
+  removeBtn.onclick = removeBookHandler;
   removeBtn.classList.add('delete-btn');
   removeBtn.appendChild(document.createTextNode('🗑'));
   card.appendChild(removeBtn);
@@ -108,3 +110,10 @@ function submitHandler(e) {
 }
 const form = document.getElementById('form');
 form.addEventListener('submit', submitHandler);
+
+function removeBookHandler(e) {
+  if (confirm("Are you sure to delete this book?")){
+    myLibrary = myLibrary.filter((_book, index) => index !== parseInt(e.target.dataset.id));
+    renderBookList();
+  }
+}
